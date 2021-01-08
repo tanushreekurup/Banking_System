@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bank</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Bank Card Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+   
+	
+	<!-- css files 
+    <link href="css/css_slider.css" rel="stylesheet">-->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="//fonts.googleapis.com/css?family=Niramit:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+
+	<style type="text/css">
+		
+		#form2 {
+    position: relative;
+    bottom: 82px;
+    left: 200px;
+    }
+
+
+    .img-contact{
+    	height: 100px;
+    	width: 100px;
+
+    }
+
+	</style>
+	
+	
+</head>
+<body>
+
+
+
+<header>
+	<div class="container">
+		
+		<nav class="py-3 d-lg-flex">
+			<div id="logo">
+				<h1> <a href="index.html"><span class="fa fa-university"></span> Bank </a></h1>
+			</div>
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<input type="checkbox" id="drop" />
+			<ul class="menu ml-auto mt-1">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li class=""><a href="#bottom">Contact</a></li>
+				<li class=""><a href="#bottom">Must Try</a></li>
+			</ul>
+		</nav>
+		
+	</div>
+</header>
+
+<div class="banner" id="home">
+	<div class="layer">
+		<div class="container">
+			<div class="banner-text-w3pvt">
+					
+							<div class="w3ls_banner_txt">
+
+								<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+								<h1 style="color: white">Transfering Money is now 
+  								<span
+     								class="txt-rotate"
+								    data-period="2000"
+								    data-rotate='[ "FAST.", "SIMPLE.", "and EASY."]' style="color: #2e2b22"></span>
+								</h1>
+
+								<h4 class="b-w3ltxt text-capitalize">Cash Management</h4>
+								<p class="w3ls_pvt-title my-3">Check account balance ,view the customer list,select from the customers to transfer money to,all in one go,easy as never before.</p>
+
+								
+								<form>
+  									<a href="customers_list.php"><input type="button" value="Customers" name="myfield" class="btn btn-banner my-3 mr-2" id="button1" style="border:2px solid white;width:20%;height:50px;color: #1f1a1a;font-weight: bold;"></a>
+								</form>
+
+								<form id="form2">
+  									<a href="transfer.php"><input type="button" value="Transfer" name="myfield" class="btn btn-banner1 my-3" id="button2" style="border:2px solid white;width:20%;height:50px;"></a>
+								</form>
+								
+				
+							</div>	
+					
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="banner-bottom pt-5">
+	<div class="container">
+		<div class="row bottom_grids text-center mt-lg-5 mt-sm-3">
+			<div class="col-md-4 grid1 mb-5">
+				<img src="images/contact.png" alt="" class="img-contact">
+				<h3 class="my-3">Contact</h3>
+				<p class="">Customer Service Department<br>
+							BANK<br>
+							State Bank Bhavan, 16th Floor
+							Madam Road,
+							Mumbai 321 432
+							Tel: 032-23417563
+							Fax: 124-45655555</p>
+			</div>
+			<div class="col-md-4 grid2 mb-5"><br>
+				<img src="images/a2.png" alt="" cclass="img-contact">
+				<h3 class="my-3">Security</h3>
+				<p class=""> Digital Banking has revolutionised the banking sector by facilitating quicker and more convenient transactions.We ensure secure transactions,and are always available to solve any issues.</p>
+			</div>
+			<div class="col-md-4 grid3 mb-5">
+				<img src="images/a3.png" alt="" class="img-contact">
+				<h3 class="my-3">Must try</h3>
+				<p class=""> Go digital with new digital services,watch and learn.
+				You can also open a Fixed Deposit using WhatApp,contact for more information.</p><a name="bottom"></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<script type="text/javascript">
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+</script>
+</body>
+</html>
